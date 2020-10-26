@@ -3,7 +3,7 @@ async function getMeme() {
     const data = await response.json();
     const memeUrl = data.data.memes[Math.floor(Math.random()*99)].url;
 
-    document.getElementById("meme-div").innerHTML = `
-        <img src="${memeUrl}">
+    document.getElementById("meme-div").innerHTML += `
+        <img class="img" src="${memeUrl}">
     `
 }
